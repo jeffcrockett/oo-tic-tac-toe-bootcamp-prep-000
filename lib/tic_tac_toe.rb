@@ -67,34 +67,33 @@ class TicTacToe
   
   def won?
     WIN_COMBINATIONS.each do |nums|
-      if nums.all?{|index| board[index] == 'X'} or nums.all?{|index| board[index] == 'O'}
+      if nums.all?{|index| @board[index] == 'X'} or nums.all?{|index| @board[index] == 'O'}
         return nums
       end
     end
     return false
   end
 
-  def full?(board)
-    if (0..8).to_a.all?{|index| position_taken?(board, index)}
+  def full?
+    if (0..8).to_a.all?{|index| position_taken?(@board, index)}
       return true
     end
     return false
   end
 
-  def draw?(board)
-    full?(board) && !won?(board) ? true : false
+  def draw?
+    full? && !won? ? true : false
   end
   
-  def over?(board)
-    won?(board) or draw?(board) or full?(board)
+  def over?
+    won? or draw? or full?
   end
   
-  def winner(board)
-    winner = won?(board)
+  def winner
+    winner = won?
     if winner.is_a?(Array)
-      return board[winner[0]] == 'X' ? 'X' : 'O'
+      return @board[winner[0]] == 'X' ? 'X' : 'O'
     end
     return nil
   end
-
 end
