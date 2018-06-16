@@ -8,3 +8,4 @@ class TicTacToe
   def position_taken?(index)
     !(self.board[index].nil? || self.board[index] == " ")
   end
+end
