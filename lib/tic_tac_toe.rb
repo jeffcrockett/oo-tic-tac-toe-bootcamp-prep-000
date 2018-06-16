@@ -75,7 +75,7 @@ class TicTacToe
   end
 
   def full?
-    if (0..8).to_a.all?{|index| position_taken?(@board, index)}
+    if (0..8).to_a.all?{|index| position_taken?(index)}
       return true
     end
     return false
