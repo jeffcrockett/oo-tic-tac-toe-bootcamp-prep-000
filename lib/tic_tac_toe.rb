@@ -60,9 +60,9 @@ class TicTacToe
     counter
   end
 
-def current_player(board)
-  counter = turn_count(board)
-  player = counter % 2 == 0 ? 'X' : 'O'
-end
+  def current_player(board)
+    counter = turn_count(board)
+    player = counter % 2 == 0 ? 'X' : 'O'
+  end
 end
 end
