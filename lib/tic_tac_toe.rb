@@ -50,9 +50,9 @@ class TicTacToe
     end
   end
   
-  def turn_count(board)
+  def turn_count
     counter = 0
-    board.each do |square|
+    @board.each do |square|
       if square == 'X' || square == 'O'
         counter += 1 
       end
@@ -60,9 +60,10 @@ class TicTacToe
     counter
   end
 
-  def current_player(board)
-    counter = turn_count(board)
+  def current_player
+    counter = turn_count
     player = counter % 2 == 0 ? 'X' : 'O'
   end
-end
+  
+  
 end
