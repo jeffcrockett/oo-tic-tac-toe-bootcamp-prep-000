@@ -3,4 +3,6 @@ require 'pry'
 require_relative '../lib/tic_tac_toe.rb'
 
 ttt = TicTacToe.new
+puts "Welcome to Tic Tac Toe!"
+ttt.draw_board
 ttt.play
