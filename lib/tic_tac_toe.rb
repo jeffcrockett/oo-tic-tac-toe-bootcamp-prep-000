@@ -29,4 +29,14 @@ class TicTacToe
   def move(index, char='X')
     @board[index] = char
   end
+  
+  def valid_move?(index)
+    if index.between?(0, 8) and !position_taken?(@board, index)
+      return true 
+    else
+      return false
+    end
+  end
+  
+  
 end
